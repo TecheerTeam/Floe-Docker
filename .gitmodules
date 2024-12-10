@@ -1,0 +1,6 @@
+[submodule "Floe-Backend"]
+	path = Floe-Backend
+	url = https://github.com/TecheerTeam/Floe-Backend.git
+[submodule "floe-frontend"]
+	path = floe-frontend
+	url = https://github.com/TecheerTeam/floe-frontend.git
