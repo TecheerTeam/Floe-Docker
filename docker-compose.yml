@@ -13,14 +13,13 @@ services:
 
   backend:
     build:
-    context: ./Floe-Backend/floe
-    dockerfile: Dockerfile
+      context: ./Floe-Backend/floe
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     env_file:
      - .env  # 부모의 .env 파일 사용
     depends_on:
       - mysql
-      -
 volumes:
   db-data:
