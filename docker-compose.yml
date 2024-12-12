@@ -20,6 +20,6 @@ services:
     env_file:
      - .env  # 부모의 .env 파일 사용
     depends_on:
-      - "mysql"
+      - mysql
 volumes:
   db-data:
