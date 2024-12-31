@@ -1,4 +1,3 @@
-
 services:
   mysql:
     image: mysql:8.0
@@ -21,5 +20,17 @@ services:
      - .env  # 부모의 .env 파일 사용
     depends_on:
       - mysql
+      - redis
+
+  redis:
+    image: redis:7.4
+    container_name: floe-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    env_file:
+      - .env
+    command: ["redis-server", "--save", "''", "--appendonly", "no"] # db 기능 비활성화
+
 volumes:
   db-data:
